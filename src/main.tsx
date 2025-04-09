@@ -5,6 +5,7 @@ import App from './App.tsx'
 import { ApolloProvider } from '@apollo/client';
 import client from './client'; // <-- Apollo Client
 import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
