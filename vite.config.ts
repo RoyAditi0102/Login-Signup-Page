@@ -6,6 +6,6 @@ export default defineConfig({
   preview: {
     host: true,
     port: parseInt(process.env.PORT ?? '4173'), 
-    allowedHosts: ['*'],
+    allowedHosts: ['login-signup-page-1vk0.onrender.com'],
   },
 });
