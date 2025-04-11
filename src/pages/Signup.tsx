@@ -49,27 +49,21 @@ const Signup = () => {
   return (
     <div
       className={`d-flex flex-column justify-content-center align-items-center vh-100 ${
-        isDarkMode ? 'bg-dark text-light' : ''
+        isDarkMode ? 'gradient-dark text-light' : 'gradient-light'
       }`}
-      style={{
-        background: isDarkMode
-          ? 'linear-gradient(to top,rgb(43, 39, 16), #000)'
-          : 'linear-gradient(to top, #fff, rgb(255, 110, 168))',
-      }}
     >
       <Toaster />
 
       <button
-        className={`btn position-absolute top-0 end-0 m-3 py-2 fw-bold shadow rounded-pill d-flex align-items-center gap-2 ${isDarkMode ? 'btn-light' : 'btn-dark'}`}
+        className={`btn theme-toggle-btn d-flex align-items-center gap-2 ${
+          isDarkMode ? 'btn-light' : 'btn-dark'
+        }`}
         onClick={toggleTheme}
       >
         {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
       </button>
 
-      <div
-        className={`card p-4 shadow ${isDarkMode ? 'bg-secondary' : 'bg-white'}`}
-        style={{ width: '100%', maxWidth: '400px' }}
-      >
+      <div className={`card p-4 shadow card-max ${isDarkMode ? 'bg-secondary' : 'bg-white'}`}>
         <h2 className={`text-center mb-4 ${isDarkMode ? 'text-white' : 'text-dark'}`}>
           Sign Up
         </h2>
@@ -109,8 +103,7 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="btn w-100"
-            style={{ backgroundColor: '#ff4da6', color: 'white' }}
+            className="btn w-100 login-signup-btn"
             disabled={loading || !email || !username || !password}
           >
             {loading ? 'Signing up...' : 'Signup'}

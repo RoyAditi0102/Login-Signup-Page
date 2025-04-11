@@ -1,4 +1,46 @@
 body {
     font-family: 'Poppins', sans-serif;
   }
-  
+
+
+.gradient-light {
+  background: linear-gradient(to top, #fff, rgb(255, 110, 168));
+}
+
+.gradient-dark {
+  background: linear-gradient(to top, rgb(43, 39, 16), #000);
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 999px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+.card-max {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-signup-btn {
+  background-color: #ff4da6;
+  color: white;
+}
+
+.login-signup-btn:hover {
+  background-color: #ea1386;
+  color: white;
+}
+
+.landing-container.light-mode {
+  background: linear-gradient(to top, #fff, rgb(255, 110, 168));
+}
+
+.landing-container.dark-mode {
+  background: linear-gradient(to top, rgb(43, 39, 16), #000);
+}
