@@ -47,15 +47,16 @@ const Signup = () => {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div
-      className={`d-flex flex-column justify-content-center align-items-center vh-100 ${
-        isDarkMode ? 'gradient-dark text-light' : 'gradient-light'
-      }`}
-    >
+<div
+  className={`vh-100 ${isDarkMode ? 'gradient-dark text-light' : 'gradient-light'}`}
+>
+  <div className="container h-100">
+    <div className="d-flex flex-column justify-content-center align-items-center h-100">
       <Toaster />
 
+      {/* Theme Toggle */}
       <button
-        className={`btn theme-toggle-btn d-flex align-items-center gap-2 ${
+        className={`btn theme-toggle-btn d-flex align-items-center gap-2 mb-3 ${
           isDarkMode ? 'btn-light' : 'btn-dark'
         }`}
         onClick={toggleTheme}
@@ -63,7 +64,11 @@ const Signup = () => {
         {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
       </button>
 
-      <div className={`card p-4 shadow card-max ${isDarkMode ? 'bg-secondary' : 'bg-white'}`}>
+      {/* Signup Card */}
+      <div
+        className={`card p-4 shadow card-max w-100 ${isDarkMode ? 'bg-secondary' : 'bg-white'}`}
+        style={{ maxWidth: '400px' }}
+      >
         <h2 className={`text-center mb-4 ${isDarkMode ? 'text-white' : 'text-dark'}`}>
           Sign Up
         </h2>
@@ -124,12 +129,15 @@ const Signup = () => {
         </form>
       </div>
 
+      {/* Footer */}
       <div className="position-absolute bottom-0 start-50 translate-middle-x text-center pb-3 small">
         <a href="#" className="text-decoration-none me-3">Terms</a>
         <a href="#" className="text-decoration-none me-3">Privacy</a>
         <a href="#" className="text-decoration-none">Contact</a>
       </div>
     </div>
+  </div>
+</div>
   );
 };
 
